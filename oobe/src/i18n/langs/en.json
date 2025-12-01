@@ -110,6 +110,42 @@
   "pages.DemoApp.title": {
     "defaultMessage": "Demo Apps"
   },
+  "pages.IndustrialAutomation.plant.desc": {
+    "defaultMessage": "Get reports and insights as the plant manager."
+  },
+  "pages.IndustrialAutomation.plant.title": {
+    "defaultMessage": "Plant Management"
+  },
+  "pages.IndustrialAutomation.qualityInspection.desc": {
+    "defaultMessage": "Inspect objects and analyze their faults and conformity."
+  },
+  "pages.IndustrialAutomation.qualityInspection.title": {
+    "defaultMessage": "Quality Inspection"
+  },
+  "pages.Medical.check.desc": {
+    "defaultMessage": "Detect defects and verify sample integrity."
+  },
+  "pages.Medical.check.title": {
+    "defaultMessage": "Sample Integrity Check"
+  },
+  "pages.Medical.smartClinicalRecord.desc": {
+    "defaultMessage": "Access patient data and request info and updates."
+  },
+  "pages.Medical.smartClinicalRecord.title": {
+    "defaultMessage": "Smart Clinical Record"
+  },
+  "pages.SmartBuilding.detection.desc": {
+    "defaultMessage": "Count people and detect falls in common areas."
+  },
+  "pages.SmartBuilding.detection.title": {
+    "defaultMessage": "Crowd and fall detection"
+  },
+  "pages.SmartBuilding.smartLobby.desc": {
+    "defaultMessage": "Recognize residents and access condo info."
+  },
+  "pages.SmartBuilding.smartLobby.title": {
+    "defaultMessage": "Smart Lobby"
+  },
   "pages.TestingTool.easyTransfer": {
     "defaultMessage": "Easy Image/Video transfer"
   },
@@ -127,5 +163,17 @@
   },
   "pages.TestingTool.videoPlayer": {
     "defaultMessage": "Video player"
+  },
+  "pages.general.alertManagement.desc": {
+    "defaultMessage": "View and resolve machine alerts."
+  },
+  "pages.general.alertManagement.title": {
+    "defaultMessage": "Alert Management"
+  },
+  "pages.general.desc": {
+    "defaultMessage": "Choose one of the options below to get started."
+  },
+  "pages.general.title": {
+    "defaultMessage": "What would you like to do?"
   }
 }

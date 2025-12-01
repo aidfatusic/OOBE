@@ -1,4 +1,5 @@
 import { Container } from "react-bootstrap";
+import { NavLink } from "react-router-dom";
 import "./DemoApp.scss";
 import CardComponent from "../components/CardComponent";
 import { corporateFare, factory, vitalSigns } from "../assets/images";
@@ -12,53 +13,57 @@ const DemoApp = () => {
       </h1>
 
       <div className="cards-wrapper">
-        <CardComponent
-          icon={corporateFare}
-          title={
-            <FormattedMessage
-              id="pages.DemoApp.smartBuilding.title"
-              defaultMessage="Smart Building"
-            />
-          }
-          description={
-            <FormattedMessage
-              id="pages.DemoApp.smartBuilding.desc"
-              defaultMessage="Control building systems and detect issues in real time"
-            />
-          }
-        />
-
-        <CardComponent
-          icon={vitalSigns}
-          title={
-            <FormattedMessage
-              id="pages.DemoApp.medical.title"
-              defaultMessage="Medical"
-            />
-          }
-          description={
-            <FormattedMessage
-              id="pages.DemoApp.medical.desc"
-              defaultMessage="Monitor machines and resolve alerts in the factory"
-            />
-          }
-        />
-
-        <CardComponent
-          icon={factory}
-          title={
-            <FormattedMessage
-              id="pages.DemoApp.industrialAutomation.title"
-              defaultMessage="Industrial Automation"
-            />
-          }
-          description={
-            <FormattedMessage
-              id="pages.DemoApp.industrialAutomation.desc"
-              defaultMessage="Monitor machines and resolve alerts in the factory"
-            />
-          }
-        />
+        <NavLink to="/smart-building" className="nav-link">
+          <CardComponent
+            icon={corporateFare}
+            title={
+              <FormattedMessage
+                id="pages.DemoApp.smartBuilding.title"
+                defaultMessage="Smart Building"
+              />
+            }
+            description={
+              <FormattedMessage
+                id="pages.DemoApp.smartBuilding.desc"
+                defaultMessage="Control building systems and detect issues in real time"
+              />
+            }
+          />
+        </NavLink>
+        <NavLink to="/medical" className="nav-link">
+          <CardComponent
+            icon={vitalSigns}
+            title={
+              <FormattedMessage
+                id="pages.DemoApp.medical.title"
+                defaultMessage="Medical"
+              />
+            }
+            description={
+              <FormattedMessage
+                id="pages.DemoApp.medical.desc"
+                defaultMessage="Monitor machines and resolve alerts in the factory"
+              />
+            }
+          />
+        </NavLink>
+        <NavLink to="/industrial" className="nav-link">
+          <CardComponent
+            icon={factory}
+            title={
+              <FormattedMessage
+                id="pages.DemoApp.industrialAutomation.title"
+                defaultMessage="Industrial Automation"
+              />
+            }
+            description={
+              <FormattedMessage
+                id="pages.DemoApp.industrialAutomation.desc"
+                defaultMessage="Monitor machines and resolve alerts in the factory"
+              />
+            }
+          />
+        </NavLink>
       </div>
     </Container>
   );

@@ -7,6 +7,9 @@ import { useMemo } from "react";
 import { APIClient } from "./api/APIClient";
 import DemoApp from "./pages/DemoApp";
 import TestingTool from "./pages/TestingTool";
+import SmartBuilding from "./pages/SmartBuilding";
+import Medical from "./pages/Medical";
+import IndustrialAutomation from "./pages/IndustrialAutomation";
 
 function App() {
   const apiClient = useMemo(() => {
@@ -27,6 +30,9 @@ function App() {
             />
             <Route path="/demo" element={<DemoApp />} />
             <Route path="/tool" element={<TestingTool />} />
+            <Route path="/smart-building" element={<SmartBuilding />} />
+            <Route path="/medical" element={<Medical />} />
+            <Route path="/industrial" element={<IndustrialAutomation />} />
             <Route
               path="/hub"
               element={
