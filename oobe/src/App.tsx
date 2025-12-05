@@ -10,6 +10,7 @@ import TestingTool from "./pages/TestingTool";
 import SmartBuilding from "./pages/SmartBuilding";
 import Medical from "./pages/Medical";
 import IndustrialAutomation from "./pages/IndustrialAutomation";
+import SmartAlertManagement from "./pages/SmartAlertManagement";
 
 function App() {
   const apiClient = useMemo(() => {
@@ -33,6 +34,10 @@ function App() {
             <Route path="/smart-building" element={<SmartBuilding />} />
             <Route path="/medical" element={<Medical />} />
             <Route path="/industrial" element={<IndustrialAutomation />} />
+            <Route
+              path="/smart-alert-management"
+              element={<SmartAlertManagement />}
+            />
             <Route
               path="/hub"
               element={
