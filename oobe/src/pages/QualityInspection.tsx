@@ -98,7 +98,7 @@ const QualityInspection = () => {
         >
           <FormattedMessage
             id="components.QualityInspection.mainMessage"
-            defaultMessage="Place the object in front of the camera within the detection area."
+            defaultMessage="This is a demo environment, the camera feed is simulated. Click ‘Start analysis’ to run inference."
           />
         </h2>
       </div>

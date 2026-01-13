@@ -93,7 +93,7 @@
     "defaultMessage": "Analyze next object"
   },
   "components.QualityInspection.mainMessage": {
-    "defaultMessage": "Place the object in front of the camera within the detection area."
+    "defaultMessage": "This is a demo environment, the camera feed is simulated. Click ‘Start analysis’ to run inference."
   },
   "components.QualityInspection.startAnalysisButton": {
     "defaultMessage": "Start analysis"
@@ -105,7 +105,7 @@
     "defaultMessage": "Analyze next object"
   },
   "components.SampleIntegrityCheck.mainMessage": {
-    "defaultMessage": "Place the object in front of the camera within the detection area."
+    "defaultMessage": "This is a demo environment, the camera feed is simulated. Click ‘Start analysis’ to run inference."
   },
   "components.SampleIntegrityCheck.startButton": {
     "defaultMessage": "Start analysis"
