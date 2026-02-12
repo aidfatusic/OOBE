@@ -16,10 +16,8 @@ export type AppProps = {
 const App = ({ astarteUrl, realm, deviceId, token }: AppProps) => {
   const [selectedSection, setSelectedSection] =
     useState<SidebarSection>("overview");
-  const [patientOverview, setPatientOverview] = useState<PatientOverviewData[]>(
-    [],
-  );
-  const [failedToLoad, setFailedToLoad] = useState<boolean>(false);
+  const [patientOverview, setPatientOverview] =
+    useState<PatientOverviewData | null>(null);
   const [dataFetching, setDataFetching] = useState(false);
 
   const handleSectionChange = (e: SidebarSection) => {
@@ -35,12 +33,10 @@ const App = ({ astarteUrl, realm, deviceId, token }: AppProps) => {
     astarteClient
       .getPatientOverview(deviceId)
       .then((patientData) => {
-        setPatientOverview([patientData]);
-        setFailedToLoad(false);
+        setPatientOverview(patientData);
       })
       .catch(() => {
-        setFailedToLoad(true);
-        setPatientOverview([]);
+        setPatientOverview(null);
       })
       .finally(() => {
         setDataFetching(false);
@@ -48,7 +44,7 @@ const App = ({ astarteUrl, realm, deviceId, token }: AppProps) => {
   }, [astarteClient, deviceId]);
 
   const sectionContent: Record<SidebarSection, JSX.Element> = {
-    overview: <PatientOverview />,
+    overview: <PatientOverview data={patientOverview} />,
     reports: (
       <div>
         <h3>
