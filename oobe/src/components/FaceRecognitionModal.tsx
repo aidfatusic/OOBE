@@ -5,27 +5,42 @@ import { FormattedMessage } from "react-intl";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faX } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState } from "react";
+import type { APIClient } from "../api/APIClient";
+import { useNavigate } from "react-router-dom";
 
 interface FaceRecognitionModalProps {
   show: boolean;
   onHide: () => void;
-  url?: string;
+  url: string;
+  apiClient: APIClient;
 }
 
-const FaceRecognitionModal = ({ show, onHide }: FaceRecognitionModalProps) => {
+const FaceRecognitionModal = ({
+  show,
+  onHide,
+  url,
+  apiClient,
+}: FaceRecognitionModalProps) => {
   const [authenticated, setAuthenticated] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (show) {
-      const timer = setTimeout(() => {
-        setAuthenticated(true);
-      }, 3000);
-
-      return () => clearTimeout(timer);
+      apiClient.connectFaceRecognition((update) => {
+        if (Object.entries(update).length == 0) {
+          setAuthenticated(true);
+          const timer = setTimeout(() => {
+            onHide();
+            navigate(url);
+          }, 2000);
+          return () => clearTimeout(timer);
+        }
+      });
     } else {
+      apiClient.disconnectFaceRecognition();
       setAuthenticated(false);
     }
-  }, [show]);
+  }, [show, apiClient, onHide, url, navigate]);
 
   return (
     <Modal
