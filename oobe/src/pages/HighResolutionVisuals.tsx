@@ -1,11 +1,31 @@
-import { resolutionVisuals, logo } from "../assets/images";
+import {
+  resolutionVisuals1,
+  resolutionVisuals2,
+  resolutionVisuals3,
+  resolutionVisuals4,
+  resolutionVisuals5,
+  resolutionVisuals6,
+  logo,
+} from "../assets/images";
 import { Container, Row, Col, Image, Button } from "react-bootstrap";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faX } from "@fortawesome/free-solid-svg-icons";
 import "./HighResolutionVisuals.scss";
 
 const HighResolutionVisuals = () => {
+  const [currentIndex, setCurrentIndex] = useState<number>(0);
+  const navigate = useNavigate();
+
+  const handleMediaClick = () => {
+    if (currentIndex < 5) {
+      setCurrentIndex(currentIndex + 1);
+    } else {
+      navigate("/tool");
+    }
+  };
   return (
     <Container
       fluid
@@ -31,7 +51,24 @@ const HighResolutionVisuals = () => {
 
       <Row className="justify-content-center">
         <Col className="text-center">
-          <img src={resolutionVisuals} alt="icon" className="vh-100 vw-100" />
+          <img
+            src={
+              currentIndex == 0
+                ? resolutionVisuals1
+                : currentIndex == 1
+                  ? resolutionVisuals2
+                  : currentIndex == 2
+                    ? resolutionVisuals3
+                    : currentIndex == 3
+                      ? resolutionVisuals4
+                      : currentIndex == 4
+                        ? resolutionVisuals5
+                        : resolutionVisuals6
+            }
+            alt="icon"
+            className="vh-100 vw-100"
+            onClick={handleMediaClick}
+          />
         </Col>
       </Row>
     </Container>

@@ -18,7 +18,12 @@ import rgbPattern1 from "./rgb_pattern1.jpg";
 import rgbPattern2 from "./rgb_pattern2.jpg";
 import person from "./person.png";
 import expand from "./expand_content.png";
-import resolutionVisuals from "./resolution_visuals.png";
+import resolutionVisuals1 from "./resolution_visuals1.png";
+import resolutionVisuals2 from "./resolution_visuals2.png";
+import resolutionVisuals3 from "./resolution_visuals3.png";
+import resolutionVisuals4 from "./resolution_visuals4.png";
+import resolutionVisuals5 from "./resolution_visuals5.png";
+import resolutionVisuals6 from "./resolution_visuals6.png";
 import pcbMissingHole00 from "./missing_hole_00.jpg";
 import pcbMissingHole01 from "./missing_hole_01.jpg";
 import pcbMissingHole02 from "./missing_hole_02.jpg";
@@ -83,7 +88,12 @@ export {
   rgbPattern2,
   person,
   expand,
-  resolutionVisuals,
+  resolutionVisuals1,
+  resolutionVisuals2,
+  resolutionVisuals3,
+  resolutionVisuals4,
+  resolutionVisuals5,
+  resolutionVisuals6,
   pcbMissingHole00,
   pcbMissingHole01,
   pcbMissingHole02,
